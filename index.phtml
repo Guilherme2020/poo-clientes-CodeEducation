@@ -1,6 +1,6 @@
 <?php 
 	require_once('BancoClientes.php');
-    $banco = new BancoClientes();
+    $banco = new BancoDeClientes();
     if(isset($_GET['order'])){
         $clientes = $banco->getClientes($_GET['order']);
     }else{
