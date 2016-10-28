@@ -33,7 +33,7 @@
 		}
 		public function getCpf(){
 
-			return $this->cpf
+			return $this->cpf;
 		}
 		public function setCpf(){
 			$this->cpf = $cpf;
