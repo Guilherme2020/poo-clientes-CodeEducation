@@ -65,7 +65,7 @@
 	                <td><?php echo $cliente->getNome(); ?></td>
 	                <td><?php echo $cliente->getCPF(); ?></td>
 	                <td><?php echo $cliente->getEndereco(); ?></td>
-	                <td><a href="cliente.php" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a></td>
+	                <td><a href="cliente.php?id=<?php echo $cliente->getId(); ?>" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a></td>
 	            </tr>
 
        		 <?php endforeach; ?>
