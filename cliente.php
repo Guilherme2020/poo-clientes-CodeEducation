@@ -35,7 +35,7 @@
 			</div>
 
 			<div class="panel-footer">
-				<a href="index.phtml" class="btn btn-default">Voltar</a>	
+				<a href="index.php" class="btn btn-default">Voltar</a>	
 			</div>
 
 		</div>

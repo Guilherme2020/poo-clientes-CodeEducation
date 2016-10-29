@@ -22,8 +22,7 @@ class BancoDeClientes{
 			6 => new Cliente('Bartolomeu Cesar ','1122112','DF'),
 			7 => new Cliente('Pedro Alex','122121','PARQUE Centro'),
 			8 => new Cliente('Victor Hugor','2212121','Morada Nova'),
-			9 => new Cliente('Lucas Miranda','21221212112','Morada Nova'),
-			10 => new Cliente('Arcenio Pereira José','Lourival Parente')
+			9 => new Cliente('Lucas Miranda','21221212112','Morada Nova')
 
 		);
 	}

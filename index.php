@@ -17,14 +17,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Clientess</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="app.css">
+
 </head>
 <body>	
 
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Gestão de Pessoas Clientes</h1>
-		
-			<p>Exercicio da code.education</p>
+			<h1 class="text-info">Gestão de Pessoas Clientes</h1>
+			
+			<p class="text-info">Exercicio da code.education</p>
+			
 		</div>
 
 
@@ -46,14 +49,14 @@
 
 		<table class="table table-striped table-hover">
 			<thead>
-				<td>ID</td>
+				<td class="danger">ID</td>
 
-				<td>Nome</td>
+				<td class="default">Nome</td>
 
-				<td>CPF</td>
+				<td class="danger">CPF</td>
 
 				<td>ENDEREÇO</td>
-				<td>Ações</td>
+				<td class="danger">Ações</td>
 			</thead>
 			
 			<?php foreach($clientes as $cliente): ?>
@@ -62,7 +65,7 @@
 	                <td><?php echo $cliente->getNome(); ?></td>
 	                <td><?php echo $cliente->getCPF(); ?></td>
 	                <td><?php echo $cliente->getEndereco(); ?></td>
-	                <td><a href="<?php echo 'cliente.phtml?id='.$cliente->getId(); ?>" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a></td>
+	                <td><a href="cliente.php" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a></td>
 	            </tr>
 
        		 <?php endforeach; ?>
