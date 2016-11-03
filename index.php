@@ -16,18 +16,23 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Clientess</title>
+	<link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="app.css">
-
+	
 </head>
 <body>	
 
 	<div class="container">
-		<div class="jumbotron">
-			<h1 class="text-info">Gestão de Pessoas Clientes</h1>
-			
-			<p class="text-info">Exercicio da code.education</p>
-			
+		<img src="img/cliente.jpg" alt="">
+		<div class="jumb">
+				
+					
+			<div >
+				<h1 class="text-info">Gestão de Pessoas Clientes</h1>
+				
+				<p class="text-info">Exercicio da code.education</p>
+				
+			</div>
 		</div>
 
 
@@ -80,6 +85,6 @@
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
+<script  src="js/bootstrap.js"></script>
 <script src="js/bootstrap.min.js"></script>

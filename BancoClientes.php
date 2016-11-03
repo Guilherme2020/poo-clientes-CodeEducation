@@ -4,7 +4,7 @@ require_once('Cliente.php');
 
 
 
-class BancoDeClientes{
+class BancoDeClientes extends Cliente{
 
 	private static $clientes = array();
 

@@ -18,8 +18,9 @@
 </head>
 <body>
 	<div class="container">
-		
-		<div class="jumbotron">
+		<img src="img/cliente.jpg" alt="">
+
+		<div class="jumb">
 			<h1>Gestão de Clientess</h1>
 			<p>Exercicio da Code.Education</p>
 		</div>
@@ -49,4 +50,8 @@
 
 </body>
 </html>
-
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script  src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
