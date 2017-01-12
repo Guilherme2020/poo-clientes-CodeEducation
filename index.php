@@ -55,12 +55,15 @@
 		<table class="table table-striped table-hover">
 			<thead>
 				<td class="danger">ID</td>
-
 				<td class="default">Nome</td>
 
 				<td class="danger">CPF</td>
+				<td>Endereço</td>				
+				<td>Tipo</td>				
+												
+																
+												
 
-				<td>ENDEREÇO</td>
 				<td class="danger">Ações</td>
 			</thead>
 			
@@ -70,7 +73,10 @@
 	                <td><?php echo $cliente->getNome(); ?></td>
 	                <td><?php echo $cliente->getCPF(); ?></td>
 	                <td><?php echo $cliente->getEndereco(); ?></td>
-	                <td><a href="cliente.php?id=<?php echo $cliente->getId(); ?>" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a></td>
+	                <td><?php echo ($cliente->EPessoaFisica())? "Pessoa Fisica": "Pessoa Juridica";?></td>
+	                <td>
+	                	<a href="cliente.php?id=<?php echo $cliente->getId(); ?>" class="btn btn-primary" title="Visualizar"><span class="glyphicon glyphicon-new-window"></span></a>
+	                </td>
 	            </tr>
 
        		 <?php endforeach; ?>
