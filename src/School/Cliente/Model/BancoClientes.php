@@ -1,7 +1,9 @@
 <?php 
-require_once('ClientePF.php'); 
-require_once('ClientePJ.php');
 
+namespace School\Cliente\Model;
+
+use School\Cliente\Type\ClientePF,
+	School\Cliente\Type\ClientePJ 
 
 class BancoDeClientes extends Cliente{
 

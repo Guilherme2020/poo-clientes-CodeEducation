@@ -1,11 +1,9 @@
 
 
 <?php 
-	require_once("ClienteInterface.php");
-	date_default_timezone_set('America/Sao_Paulo');
+	namespace School\Cliente;
 
-
-	abstract class Cliente implements ClienteInterface{
+	abstract class ClienteAbstract implements ClienteInterface{
 
 
 		protected $id;

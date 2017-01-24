@@ -1,7 +1,7 @@
 <?php 
 
-	require_once("BancoClientes.php");
-	$banco = new BancoDeClientes();
+	require_once('autoload.php');
+	$banco = new \School\Cliente\Model\BancoDeClientes();
 	$cliente = $banco->getCliente($_GET['id']);
 ?>
 
