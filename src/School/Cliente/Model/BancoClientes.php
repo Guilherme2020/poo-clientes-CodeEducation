@@ -3,7 +3,7 @@
 namespace School\Cliente\Model;
 
 use School\Cliente\Type\ClientePF,
-	School\Cliente\Type\ClientePJ 
+	School\Cliente\Type\ClientePJ;
 
 class BancoDeClientes extends Cliente{
 
