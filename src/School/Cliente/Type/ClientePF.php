@@ -1,8 +1,10 @@
 <?php 
 
-	require_once("Cliente.php");
 
-	class ClientePF extends Cliente{
+	namespace School\Cliente\Type;
+
+	use School\Cliente\ClienteAbstract;
+	class ClientePF extends ClienteAbstract{
 
 		public function __construct($nome,$cpf,$endereco){
 			parent::__construct($nome,$cpf,$endereco);
