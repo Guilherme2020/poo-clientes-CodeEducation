@@ -7,7 +7,7 @@ use School\Cliente\Type\ClientePF,
 
 class BancoDeClientes extends Cliente{
 
-	private static $clientes = array();
+    private static $clientes = array();
 
 
 	public function __construct(){
