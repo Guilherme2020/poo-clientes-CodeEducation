@@ -2,7 +2,7 @@
 	require_once('autoload.php');
     date_default_timezone_set('America/Sao_Paulo');
 	
-    $banco = new \School\Cliente\Model\BancoDeClientes();
+    $banco = new School\Cliente\Model\BancoDeClientes();
 
 	if(isset($_GET['order'])){
         $clientes = $banco->getClientes($_GET['order']);
