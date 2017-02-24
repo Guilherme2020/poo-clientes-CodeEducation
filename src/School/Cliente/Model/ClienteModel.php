@@ -12,8 +12,9 @@
 		public function __construct(Array $conn)
 		{
 			$this->coon = $conn;
-			$this->validaConexao();
-		}	
+			//$this->validaConexao();
+			$this->conecta();
+		}
 
 
 		public function conecta(){
