@@ -1,9 +1,6 @@
+<?php
 
-
-
-<?php  
-
-	namespace Aplication\Config;
+namespace Aplication\Config;
 
 	class BancoDeDados{
 

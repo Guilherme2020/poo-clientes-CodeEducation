@@ -1,12 +1,10 @@
-
-
-<?php  
+<?php
 
 	namespace School\Cliente\Model;
 
-	use SON\Cliente\ClienteAbstract;
-	use SON\Cliente\Type\ClientePF;
-	use SON\Cliente\Type\ClientePJ;
+	use School\Cliente\ClienteAbstract;
+	use School\Cliente\Type\ClientePF;
+	use School\Cliente\Type\ClientePJ;
 
 	class ClienteModel{
 		private $conn,$pdo;
@@ -24,24 +22,25 @@
 					'mysql:host='. $this->conn['servidor'] . ';dbname=' . $this->conn['banco'],
 					$this->conn['usuario'],
 					$this->conn['senha']
-			);
+				);
 			}catch(\PDOException $e){
 				throw  new \Exception("Erro ao conectar. Código".$e->getCode()."!Mensagem: ".$e->getMessage());
-            	return  this->pdo;
 			}
+			return  $this->pdo;
+
 		}
 		public function validaConexao(){
-			if(is_array($this->config)){
-              if(empty($this->config['servidor']))
+			if(is_array($this->conn)){
+              if(empty($this->conn['servidor']))
                  throw new \Exception('Você não informou o servidor !');
 
-              if(empty($this->config['banco']))
+              if(empty($this->conn['banco']))
                  throw new \Exception('Você não informou o banco de dados!');
 
-              if(empty($this->config['usuario']))
+              if(empty($this->conn['usuario']))
                  throw  new \Exception('Você não informou o usuario!');
 
-              if(!isset($this->config['senha']))
+              if(!isset($this->conn['senha']))
                  throw new \Exception('Você nao informou a senha!');
             } 
 			throw new \Exception("Esta nao e uma configuracao valida");
@@ -53,18 +52,18 @@
 
 			$consult = $this->conn->query("SELECT * FROM clientes ORDER BY nome{$order}");
 
-			while($row = consult->fetch(\PDO::FETCH_ASSOC)){
+			while($row = $consult->fetch(\PDO::FETCH_ASSOC)){
 				if($row['tipo'] == 1){
 					$array[$row['id']] = new ClientePF($row['id'],$row['nome'],$row['cpf'],$row['endereco']);
 				}else{
-					$array[$ro['id']] = new ClientePJ($row['id'],$row['nome'],$row['cpf'],$row['endereco']);
+					$array[$row['id']] = new ClientePJ($row['id'],$row['nome'],$row['cpf'],$row['endereco']);
 				}
 			}
 			return $array;
 		}
 
 		public function insert(ClienteAbstract $cliente){
-			$stmt = $this->conn->prepare('INSERT INTO clientes VALUES(:id, :nome, :cpf, :endereco, :enderecoCobranca, :tipo, :grau)')
+			$stmt = $this->conn->prepare('INSERT INTO clientes VALUES(:id, :nome, :cpf, :endereco, :enderecoCobranca, :tipo, :grau)');
 			$stmt->execute(
 					array(
 						':id' => null,
@@ -79,7 +78,7 @@
 
 		public function find($id){
 			$consult = $this->conn->query("SELECT * FROM clientes WHERE id = {$id}");
-			$row = $consulta->fetch(\PDO::FETCH_ASSOC);
+			$row = $consult->fetch(\PDO::FETCH_ASSOC);
 			if($row['tipo'] == 1){
 				  return new  ClientePF	($row['id'], $row['nome'], $row['cpf'], $row['endereco']);
 			}else{

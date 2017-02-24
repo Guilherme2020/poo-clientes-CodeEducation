@@ -1,8 +1,8 @@
 <?php 
+	date_default_timezone_set('America/Sao_Paulo');
 	require_once('autoload.php');
     //require_once('Aplication\Config\BancoDeDados.php');
-    //date_default_timezone_set('America/Sao_Paulo');
-	
+    
     //$banco = new School\Cliente\Model\BancoDeClientes();
     $banco = new Aplication\Config\BancoDeDados();
     $clienteModel =  new School\Cliente\Model\ClienteModel($BancoConfig->db);
