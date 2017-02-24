@@ -1,6 +1,3 @@
-
-
-
 <?php 	
 	namespace School\Cliente;	
 	interface ClienteInterface{
