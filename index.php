@@ -1,11 +1,11 @@
 <?php 
 	date_default_timezone_set('America/Sao_Paulo');
 	require_once('autoload.php');
-    //require_once('Aplication\Config\BancoDeDados.php');
+    //require_once('src\Aplication\Config\BancoDeDados.php');
     
     //$banco = new School\Cliente\Model\BancoDeClientes();
     $banco = new Aplication\Config\BancoDeDados();
-    $clienteModel =  new School\Cliente\Model\ClienteModel($BancoConfig->db);
+	$clienteModel =  new School\Cliente\Model\ClienteModel($banco->db);
 
 	// if(isset($_GET['order'])){
  //        $clientes = $banco->getClientes($_GET['order']);
