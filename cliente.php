@@ -3,8 +3,9 @@
 	require_once('autoload.php');
 	//$banco = new \School\Cliente\Model\BancoDeClientes();
 	//$cliente = $banco->getCliente($_GET['id']);
+$banco = new Aplication\Config\BancoDeDados();
 
-	$cliente = (new \School\Cliente\Model\ClienteModel($conn))->find($_GET['id']);
+$cliente = (new \School\Cliente\Model\ClienteModel($banco->db))->find($_GET['id']);
 ?>
 
 <!DOCTYPE html>
